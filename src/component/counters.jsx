@@ -20,7 +20,7 @@ class Counters extends Component {
 
     render() { 
         return (<>
-            {this.state.counters.map(counter=><Counter key={counter.id} value={counter} onDelete={this.handleDelete} ><p>Title{counter.id}</p></Counter>)}
+            {this.state.counters.map(counter => (<Counter key={counter.id} onDelete={this.handleDelete} counter={counter} ><p>Title{counter.id}</p></Counter>))}
         </>);
     }
 }
