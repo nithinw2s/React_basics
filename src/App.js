@@ -13,6 +13,14 @@ class App extends Component {
         { id: 3, value: 0 }
     ]
   } 
+  constructor() {
+    super()
+    console.log("Constructor rendered")
+  }
+
+  componentDidMount() {
+    console.log("App-Mounted")
+  }
 
   handleIncrement = counter => {
     let counters = [...this.state.counters];
@@ -47,7 +55,7 @@ class App extends Component {
   }
 
   render() { 
-    console.log("app running")
+    console.log("App-Rendered")
     // console.log(this.state.counters)
     return <>
     <NavBar totalCounters={this.state.counters.filter(c=>c.value>0).length }/>
